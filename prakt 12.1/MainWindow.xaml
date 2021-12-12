@@ -1,0 +1,118 @@
+﻿<Window x:Class="prakt_12._1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:prakt_12._1"
+        mc:Ignorable="d"
+        Title="Практическая работа №12" Height="381" Width="564" Loaded="Window_Loaded" ResizeMode="CanMinimize" Icon="gift256.ico">
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="О программе" ToolTip="О программе" Click="Info_Click"></MenuItem>
+            <MenuItem Header="Выход" ToolTip="Выход" Click="Exit_Click"></MenuItem>
+        </Menu>
+        <TabControl x:Name="pages" Margin="0,18,0,-18">
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="Задание 1" ToolTip="Найти периметр и площадь треугольник"/>
+                </TabItem.Header>
+                <Grid>
+                    <GroupBox Header="Исходные данные" HorizontalAlignment="Left" Height="174" Margin="10,10,0,0" VerticalAlignment="Top" Width="527">
+                        <GroupBox.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Очистить поля" Click="Clear1_Click"></MenuItem>
+                            </ContextMenu>
+                        </GroupBox.ContextMenu>
+                        <Grid>
+                            <GroupBox Header="Точка 1" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="167">
+                                <Grid>
+                                    <TextBox x:Name="x1Text" HorizontalAlignment="Left" Height="23" Margin="20,26,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="Task1_TextChanged"/>
+                                    <TextBox x:Name="y1Text" HorizontalAlignment="Left" Height="23" Margin="20,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="Task1_TextChanged"/>
+                                    <Label Content="Координата Х" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top"/>
+                                    <Label Content="Координата Y" HorizontalAlignment="Left" Margin="20,54,0,0" VerticalAlignment="Top"/>
+                                </Grid>
+                            </GroupBox>
+                            <GroupBox Header="Точка 2" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="167" Margin="172,0,0,0">
+                                <Grid>
+                                    <TextBox x:Name="x2Text" HorizontalAlignment="Left" Height="23" Margin="20,26,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="Task1_TextChanged"/>
+                                    <TextBox x:Name="y2Text" HorizontalAlignment="Left" Height="23" Margin="20,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="Task1_TextChanged"/>
+                                    <Label Content="Координата Х" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top"/>
+                                    <Label Content="Координата Y" HorizontalAlignment="Left" Margin="20,54,0,0" VerticalAlignment="Top"/>
+                                </Grid>
+                            </GroupBox>
+                            <GroupBox Header="Точка 3" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="167" Margin="344,0,0,0">
+                                <Grid>
+                                    <TextBox x:Name="x3Text" HorizontalAlignment="Left" Height="23" Margin="20,26,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="Task1_TextChanged"/>
+                                    <TextBox x:Name="y3Text" HorizontalAlignment="Left" Height="23" Margin="20,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="Task1_TextChanged"/>
+                                    <Label Content="Координата Х" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top"/>
+                                    <Label Content="Координата Y" HorizontalAlignment="Left" Margin="20,54,0,0" VerticalAlignment="Top"/>
+                                </Grid>
+                            </GroupBox>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Результат" HorizontalAlignment="Left" Height="86" Margin="10,184,0,0" VerticalAlignment="Top" Width="286" RenderTransformOrigin="0.5,0.5">
+                        <GroupBox.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Рассчиать" Click="Task1_Click"></MenuItem>
+                                <MenuItem Header="Очистить поля" Click="Clear1_Click"></MenuItem>
+                            </ContextMenu>
+                        </GroupBox.ContextMenu>
+                        <Grid>
+                            <TextBox x:Name="perimeterOut" HorizontalAlignment="Left" Height="23" Margin="10,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+                            <TextBox x:Name="squareOut" HorizontalAlignment="Left" Height="23" Margin="144,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+                            <Label Content="Периметр" HorizontalAlignment="Left" Margin="36,-1,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Площадь" HorizontalAlignment="Left" Margin="173,-1,0,0" VerticalAlignment="Top"/>
+                        </Grid>
+                    </GroupBox>
+                    <Button Content="Рассчитать" HorizontalAlignment="Left" Margin="373,210,0,0" VerticalAlignment="Top" Width="105" Height="20" ToolTip="Рассчитывает периметр и площадь треугольник по координатам точек" Click="Task1_Click"/>
+                    <Button Content="Очистить" HorizontalAlignment="Left" Margin="373,245,0,0" VerticalAlignment="Top" Width="105" Height="20" ToolTip="Очищает все поля" Click="Clear1_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="Задание 2" ToolTip="Дано трёхзначное число. Найти сумму и произведение его цифр."/>
+                </TabItem.Header>
+                <Grid>
+                    <GroupBox Header="Исходные данные" HorizontalAlignment="Left" Height="131" Margin="141,5,0,0" VerticalAlignment="Top" Width="259">
+                        <GroupBox.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Очистить поля" Click="Clear2_Click"></MenuItem>
+                            </ContextMenu>
+                        </GroupBox.ContextMenu>
+                        <Grid>
+                            <TextBox x:Name="numberText" HorizontalAlignment="Left" Height="48" Margin="58,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="138" FontSize="16" TextChanged="Task2_TextChanged"/>
+                            <Label Content="Введите трёхзначное число" HorizontalAlignment="Left" Margin="44,0,0,0" VerticalAlignment="Top"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Результат" HorizontalAlignment="Left" Height="131" Margin="141,141,0,0" VerticalAlignment="Top" Width="259">
+                        <GroupBox.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Рассчитать" Click="Task2_Click"></MenuItem>
+                                <MenuItem Header="Очистить поля" Click="Clear2_Click"></MenuItem>
+                            </ContextMenu>
+                        </GroupBox.ContextMenu>
+                        <Grid>
+                            <Label Content="Сумма" HorizontalAlignment="Left" Margin="41,5,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Произведение" HorizontalAlignment="Left" Margin="137,5,0,0" VerticalAlignment="Top"/>
+                            <TextBox x:Name="compositionOut" HorizontalAlignment="Left" Height="23" Margin="137,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="91" IsReadOnly="True"/>
+                            <TextBox x:Name="sumOut" HorizontalAlignment="Left" Height="23" Margin="24,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="91" IsReadOnly="True"/>
+                            <Button Content="Рассчитать" HorizontalAlignment="Left" Margin="80,59,0,0" VerticalAlignment="Top" Width="85" ToolTip="Рассчитывает сумму и произведение цифр введённого числа" Click="Task2_Click"/>
+                            <Button Content="Очистить" HorizontalAlignment="Left" Margin="80,84,0,0" VerticalAlignment="Top" Width="85" ToolTip="Очищает все поля" Click="Clear2_Click"/>
+                        </Grid>
+                    </GroupBox>
+                    <Image Margin="400,52,-7,119" Source="checkers.ico" Stretch="Fill" ToolTip="РЕКЛАМА"/>
+                    <Image Margin="10,10,414,60" Source="rzn.jpg" Stretch="Fill" ToolTip="РЕКЛАМА" MouseDown="Ad_Click"/>
+                    <Label Content="СКАЧИВАЙТЕ ШАШКИ" HorizontalAlignment="Left" Margin="404,208,0,0" VerticalAlignment="Top" Width="146" FontWeight="Bold"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <StatusBar VerticalAlignment="Bottom" Height="25" BorderBrush="Gray" BorderThickness="1">
+            <TextBlock Text="Номер задания: 1"></TextBlock>
+            <TextBlock Opacity="{Binding ElementName=pages, Path=SelectedIndex }" Text="Номер задания: 2" Margin="-103, 0, 0, 0" Background="#FFF1EDED"></TextBlock>
+            <Separator></Separator>
+            <TextBlock x:Name="time" Text="00:00"></TextBlock>
+            <Separator></Separator>
+            <TextBlock x:Name="date" Text="01.01.2022"></TextBlock>
+        </StatusBar>
+    </Grid>
+</Window>
