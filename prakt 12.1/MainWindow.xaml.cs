@@ -49,7 +49,7 @@ namespace prakt_12._1
                 double sideB = Math.Sqrt(Math.Pow(x3 - x2, 2) + Math.Pow(y3 - y2, 2));
                 double sideC = Math.Sqrt(Math.Pow(x3 - x1, 2) + Math.Pow(y3 - y1, 2));
                 double perimeter = Math.Round(sideA + sideB + sideC, 2);
-                double p = perimeter / 2;
+                double p = (sideA + sideB + sideC) / 2;
                 double square = Math.Round(Math.Sqrt(p * (p - sideA) * (p - sideB) * (p - sideC)), 2);
                 perimeterOut.Text = perimeter.ToString();
                 squareOut.Text = square.ToString();
