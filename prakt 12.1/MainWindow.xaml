@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:prakt_12._1"
         mc:Ignorable="d"
-        Title="Практическая работа №12" Height="381" Width="564" Loaded="Window_Loaded" ResizeMode="CanMinimize" Icon="gift256.ico">
+        Title="Практическая работа №12" Height="381" Width="565.234" Loaded="Window_Loaded" ResizeMode="CanMinimize" Icon="gift256.ico">
     <Grid>
         <Menu VerticalAlignment="Top">
             <MenuItem Header="О программе" ToolTip="О программе" Click="Info_Click"></MenuItem>
@@ -102,7 +102,7 @@
                     </GroupBox>
                     <Image Margin="400,52,-7,119" Source="checkers.ico" Stretch="Fill" ToolTip="РЕКЛАМА"/>
                     <Image Margin="10,10,414,60" Source="rzn.jpg" Stretch="Fill" ToolTip="РЕКЛАМА" MouseDown="Ad_Click"/>
-                    <Label Content="СКАЧИВАЙТЕ ШАШКИ" HorizontalAlignment="Left" Margin="404,208,0,0" VerticalAlignment="Top" Width="146" FontWeight="Bold"/>
+                    <Label Content="СКАЧИВАЙТЕ ШАШКИ" HorizontalAlignment="Left" Margin="402,208,0,0" VerticalAlignment="Top" Width="146" FontWeight="Bold"/>
                 </Grid>
             </TabItem>
         </TabControl>
